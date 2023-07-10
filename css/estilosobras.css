@@ -1,0 +1,160 @@
+html {
+
+    font-size: 62.5%;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 10x;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1cm;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    max-height: 1200px;
+    margin: 0px;
+    display: grid;
+    gap: 0px;
+grid-template-columns: (3,1fr);
+grid-template-rows: (5, auto);
+    grid-template-areas: 
+    
+        "contheader"
+
+        "menuobras"
+        "obras"
+        "footer"
+        }
+
+.container .contheader {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    padding: 0px;
+    background-color: rgb(145, 133, 133);
+    color: white;
+    grid-area: contheader;
+    height: 2cm;
+}
+
+
+.container .menuppal {
+    background-color: rgb(145, 133, 133);
+    padding: 0px;
+    font-size: 2rem;
+    text-decoration: none;
+   
+    display: flex;
+    justify-content: end ;
+    align-items: end;
+    grid-area: menuppal;
+   
+
+
+
+
+}
+
+.container .menuobras {
+
+    font-size: 2rem;
+    color: black;
+    grid-area: menuobras;
+
+}
+
+.container .obras {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    grid-area: obras;
+}
+
+.box1 {
+    width: 150px;
+    height: 120px;
+    background-color: black;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(240, 238, 235);
+    color: black;
+    text-align: center;
+    padding: 25px;
+    font-size: 1.2rem;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid cornflowerblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.textocuadro {
+
+    text-align: center;
+    width: 100%;
+    font-size: 1 rem;
+    margin: 0px;
+}
+
+.container .footer {
+    text-align: center;
+    color: white;
+    font-size: 0.4cm;
+    background-color: black;
+    grid-area: footer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas: "contheader contheader contheader"
+            "menuppal menuppal menuppal "
+            "menuobras menuobras menuobras"
+            "obras obras obras"
+            "footer footer footer"
+
+
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .containter {
+        grid-template-areas:
+            "contheader contheader contheader"
+            "menuppal menuppal menuppal "
+            "menuobras menuobras menuobras"
+            "obras obras obras"
+            "footer footer footer"
+    }
+}
+
+
+.container>div,
+
+
+.container .menuobras,
+.container .obras, 
+.container .footer {
+    gap: 20px;
+    width: 100%;
+}

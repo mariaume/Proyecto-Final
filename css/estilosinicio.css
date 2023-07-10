@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding: 0;
+    
+}
+
+
+body {
+    
+    background-size: 100vw 100vh; 
+    background-attachment: fixed;
+    margin: 0;
+   /*background-color: rgb(240, 238, 235);*/  
+
+}
+
+h1 {
+    color: white;
+    word-spacing: 5px;
+    font-size: 3rem;
+    font-family: 'Lucida Sans',
+    'Lucida Sans Unicode', sans-serif;
+    padding-top: 5px;
+    
+    /* padding-top: 0px; */
+}
+h2{
+
+        color: white;
+        word-spacing: 5px;
+        font-size: 1.5rem;
+        margin:5px;
+        font-family: 'Lucida Sans',
+        'Lucida Sans Unicode', sans-serif;
+        padding-bottom: 40px;
+        /* padding-top: 0px; */
+
+}
+
+.parrafo {
+    color: white;
+    text-align: center;
+    font-style: oblique;
+    /* padding-top: 5px; */
+    font-size: 1.1rem;
+   
+    font-family: 'Lucida Sans',
+    'Lucida Sans Unicode', sans-serif;
+
+
+}
+/*input, textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    box-sizing: border-box;
+
+}*/
+
+
+.contenedor{
+    width: 100%;
+    max-width: 1500px;/*ancho maximo de la pagina*/
+    margin: 5px auto;/*permite centrar nuestra pagina en forma horizontal*/
+    display: grid;
+    gap: 5px; /*ahorramos tener que poner margenes*/
+
+  /*3 columnas: contenido + sidebar*/
+  grid-template-columns: repeat(3,1fr);
+
+  /*4 filas: header, navbar, contenido, footer - auto lo hace responsive*/
+  grid-template-rows:repeat(3, auto);
+
+  /* Corte para dispositivo grande*/
+    grid-template-areas:"encabezado encabezado encabezado"
+                        "contenido contenido sidebar"
+                        "pie pie pie";
+                    
+}
+
+.contenedor > div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    gap: 3px;
+    border-radius: 4px;
+    width: 100%; 
+}
+
+.contenedor .encabezado{
+    background-color:rgb(145, 133, 133); 
+    height: 100px;
+    
+    
+    word-spacing: 10px;
+    
+    padding-bottom: 15px;
+    justify-content: end;
+    align-items: end;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+    
+    grid-area: encabezado;
+    display: flex;
+    
+    
+   
+    
+}
+
+
+
+
+.contenedor .contenido{
+    background-color: rgb(210, 209, 207);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    color: white;
+   
+    grid-area: contenido;   
+    
+}
+
+.contenedor .sidebar{
+    background-color: rgb(210, 209, 207);
+    /*Utilizamos flexbox para alinear el contenido*/
+    display: flex;
+       padding-top: 25px;
+    text-align: center;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-area: sidebar;
+}
+
+
+
+.contenedor .pie{
+    background-color:black;
+    color: white;
+    padding-bottom: 35px;
+    padding-top: 25px;
+    text-align: center;
+    justify-content: center;
+    grid-area: pie;
+
+
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie"
+
+
+    }
+}
+    
+@media screen and (max-width: 480px) {
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie"
+    }
+}

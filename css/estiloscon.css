@@ -1,0 +1,245 @@
+*{
+    margin:0;
+    padding: 0;
+    
+}
+
+
+body {
+    background-image: url(../images/pintando.jpg);
+    background-size: 100vw 100vh; 
+    background-attachment: fixed;
+    margin: 0;  
+
+}
+
+
+form {
+    width: 400px;
+    margin: auto;
+    background: rgba(106, 190, 188, 0.3);
+    padding: 5px 5px;
+    box-sizing: border-box;
+    margin-top: 55px;
+    border-radius: 10px;
+   
+    
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    box-sizing: border-box;
+
+}
+
+.formulario_label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formulario_grupo_input {
+    position: relative;
+}
+
+.formulario_input {
+    width: 100%;
+    background-color: white;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 40px;
+    transition: .3s ease all;
+
+}
+
+.formulario_input:focus {
+    border: 3px solid lightskyblue;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+.formulario_input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+.formulario_input-error-activo {
+    display: block;
+}
+
+.formulario_validacion-estado {
+  position: absolute;  
+    right: px;
+    bottom: px;
+    opacity: 0;
+}
+.formulario_mensaje {
+    height:45px;
+line-height: 45px;background: rgb(207, 135, 135);
+padding: 0 15px;
+border-radius: 3px;
+display: none;}
+
+.formulario_mensaje-activo 
+{display: block;}
+
+.formulario_grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario_btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: black;
+    color:white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+
+}
+.formulario_btn:hover {
+    box-shadow: 3px 0px 30px rgb(153, 163, 163, 1 );
+}
+.formulario_mensaje-exito {
+    font-size: 14px;
+    display: none;
+    color:rgb(52, 173, 28)}
+
+.formulario_mensaje-exito-activo {
+    display: block;
+} 
+/*Validacion*/
+.formulario_grupo-correcto .formulario_validacion-estado {color:darkgreen;
+    opacity: 1;}
+
+.formulario_grupo-incorrecto .formulario_label {
+    color: red;
+}
+
+.formulario_grupo-incorrecto .formulario_validacion-estado
+{
+    color: red;
+    opacity: 1;
+}
+.formulario_grupo-incorrecto .formulario_input
+{
+   border: 3px color solid red;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 1450px;/*ancho maximo de la pagina*/
+    margin: 5px auto;/*permite centrar nuestra pagina en forma horizontal*/
+    display: grid;
+    gap: 5px; /*ahorramos tener que poner margenes*/
+
+  /*3 columnas: contenido + sidebar*/
+  grid-template-columns: repeat(3,1fr);
+
+  /*4 filas: header, navbar, contenido, footer - auto lo hace responsive*/
+  grid-template-rows:repeat(4, auto);
+
+  /* Corte para dispositivo grande*/
+    grid-template-areas:"encabezado encabezado encabezado"
+                        "navbar navbar navbar"
+                        "contenido contenido sidebar"
+                        "pie pie pie";
+                    
+}
+
+.contenedor > div,
+.contenedor .encabezado,
+.contenedor .navbar,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    gap: 3px;
+    border-radius: 4px;
+    width: 100%; 
+}
+
+.contenedor .encabezado{
+    background-color: black;
+    color: rgb(5, 28, 105); 
+    height: 80px;
+    text-align: center;
+    word-spacing: 80px;
+    grid-area: encabezado;
+    
+}
+
+
+.contenedor .navbar{
+    background-color: rgba(205, 130, 194, 0.19);
+    color: rgb(5, 28, 105); 
+    text-align: left;
+    word-spacing: 50px;
+    grid-area: navbar;
+}
+
+.contenedor .contenido{
+    background-color: rgba(205, 130, 191, 0.19);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    /*justify-content: center;*/
+    height: 600px;
+    grid-area: contenido;   
+    
+}
+
+.contenedor .sidebar{
+    background-color: rgba(205, 130, 191, 0.19);
+    /*Utilizamos flexbox para alinear el contenido*/
+    display: flex;
+       padding-top: 15px;
+    text-align: center;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-area: sidebar;
+}
+
+
+
+.contenedor .pie{
+    background-color:black;
+    color: white;
+    padding-bottom: 5px;
+    text-align: center;
+    grid-area: pie
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "navbar navbar navbar"
+                             "contenido contenido contenido"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie"
+
+
+    }
+}
+    
+@media screen and (max-width: 480px) {
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "navbar navbar navbar"
+                             "contenido contenido contenido"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie"
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloscon.css">
+    <title>Portfolio Artistico</title>
+    <link rel="icon" href="images/Icono/download (4).ico">
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <h1 style="color:white">Contacto</h1>
+
+        </header>
+
+        <nav class="navbar">
+            <a style="color: black" href="index.html">INICIO</a>
+            <a style="color: black" href="obras.html">OBRAS</a>
+            <a style="color: black" href="biografia.html">BIOGRAFIA</a>
+            <a style="color: black" href="contacto.html">CONTACTO</a>
+        </nav>
+
+        <main class="contenido">
+            <form action="" class="formulario" id="formulario">
+                <h1>Formulario</h1>
+                <h3>Datos Personales</h3>
+                <div class="formulario_grupo" id="grupo_nombre">
+                    <!-- Nombre -->
+                    <label for="nombre" class="formulario_label"> Nombre: </label>
+                    <div class="formulario_grupo-input">
+                        <input type="text" class="formulario_input" name="nombre" id="nombre"
+                            placeholder="Escriba su Nombre">
+                        <i class="formulario_validacion-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formulario_input-error"> debe contener 4 a 16 caracteres</p>
+                </div>
+
+                
+                <div class="formulario_grupo" id="grupo_apellido">
+                <!-- Apellido -->
+                <label for="apellido" class="formulario_label"> Apellido: </label>
+                <div class="formulario_grupo-input">
+                    <input type="text" class="formulario_input" name="apellido" id="apellido"
+                        placeholder="Escriba su Apellido">
+                    <i class="formulario_validacion-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario_input-error"> Debe contener 4 a 16 caracteres</p>
+                </div>
+
+                 <div class="formulario_grupo" id="grupo_correo">
+                <!-- Correo -->
+                <label for="correo" class="formulario_label"> Correo ELectronico </label>
+                <div class="formulario_grupo-input">
+                    <input type="email" class="formulario_input"name="correo" id="correo"
+                        placeholder="correo@correo.com">
+                    <i class="formulario_validacion-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario_input-error">Debe contener solo letras numeros o guion bajo. </p>
+                </div>
+
+
+                <!-- <label for="apellido">Apellido: </label>
+                <input type="text" name="Apellido" id="Apellido" placeholder="Escriba su Apellido" size="20"
+                    maxlength="20" required> -->
+                <!-- DNI -->
+                <!-- <label for="DNI">DNI: </label> -->
+                <!-- <input type="number" placeholder="Escriba su DNI" required> -->
+                <!-- Edad -->
+                <!-- <label for="edad">Edad: </label> -->
+                <!-- <input type="number" size="2" placeholder="Escriba su Edad" required>  -->
+                <!-- Fecha de Nacimiento
+            <label for="fecnac">Fecha de Nacimiento</label>
+            <input type="date" min="1930-01-01" max="2015-01-01" required"> -->
+                <!-- Mail
+                <label for="mail">Mail: </label>
+                <input type="mail" id="Mail" placeholder="Escriba su mail" required> -->
+                <!-- Comentarios -->
+                <h3>Mensaje</h3>
+                <textarea name="comentarios" id="comentarios" placeholder="Deje Aqui su Mensaje" cols="20"
+                    rows="8"></textarea>
+<div class="formulario_mensaje" id="formulario_mensaje">
+    <p>
+        <i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellene el formulario correctamente
+    </p>
+</div>
+<div class="formulario_grupo formulario_grupo-btn-enviar">
+    <button type="submit" class="formulario_btn">Enviar</button>
+    <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente</p>
+</div>
+                <!-- <input type="submit" value="ENVIAR FORMULARIO"> -->
+                <!-- <input type="submit" value="Borrar Datos"> -->
+
+            </form>
+
+        </main>
+        <script src="contacto.js"></script>
+        <script src="https://kit.fontawesome.com/cc5464f93c.js" crossorigin="anonymous"></script>
+
+        <aside class="sidebar">
+            <div>
+                <h3>
+                    <p>Podés encontrarme los Lunes y Miercoles de 18 a 20 hs en la Escuela Tecnica Fernando Fader <br>
+                        La portenia 54 CABA </p>
+                </h3>
+                <br>
+                <br>
+            </div>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26264.014581192387!2d-58.50601136684416!3d-34.6293942302551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9537bfdd503%3A0xb5d8c8c98f67e714!2sEscuela%20T%C3%A9cnica%20N%C2%B0%2006%20-%20Fernando%20Fader!5e0!3m2!1ses!2sar!4v1684303602118!5m2!1ses!2sar"
+                    width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </aside>
+
+        <footer class="pie">
+            <h5>Todos los derechos reservados</h5>
+            <h5>Diseñada por GMG Group</h5>
+        </footer>
+
+    </div>
+</body>
+
+</html>

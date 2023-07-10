@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Artistico</title>
+    <link rel="stylesheet" href="css/estilosobras.css">
+    <link rel="icon" href="images/download (4).ico" width="30px">
+    <link rel="shortcut icon" href="images/Icono/firma negra recortada.ico">
+
+</head>
+
+<body class="container">
+<div>
+
+    <header class="contheader">
+        
+    </header>
+
+    <nav class="menuppal">
+        <a style=color:white href="index.html">INICIO</a>
+        <a style=color:white href="obras.html">OBRAS</a>
+        <a style=color:white href="biografia.html">BIOGRAFIA</a>
+        <a style=color:white href="contacto.html">CONTACTO</a>
+        <a style=color:white href="login.html">LOG IN</a>
+        <a style=color:white href="inventario1.html"> <img src="img/carrito-de-compras.png" width="50px" height="50px" > </a>
+
+    </nav>
+    <main>
+        <section>
+
+            <h1>OBRAS</h1>
+
+            <!--nav class="menuobras">
+                <a style=color:black href="">TODAS</a>
+                <a style=color:black href="#Paisajes">PAISAJES</a>
+                <a style=color:black href="#Figures">FIGURAS</a>
+                <a style=color:black href="#Naturaleza">NATURALEZA</a>
+            </nav-->
+
+
+        </section>
+        <section id="Paisajes">
+            <br>
+
+            <div class="obras" id="tablaProductos">
+
+                <script>
+                    //const URL = "http://127.0.0.1:5000/"
+                    const URL = "https://mguillaume.pythonanywhere.com/"
+            
+                    // Realizamos la solicitud GET al servidor para obtener todos los productos
+                    fetch(URL + 'productos')
+                        .then(function (response) {
+                            if (response.ok) {
+                                return response.json(); // Parseamos la respuesta JSON
+                            } else {
+                                // Si hubo un error, lanzar explícitamente una excepción
+                                // para ser "catcheada" más adelante
+                                throw new Error('Error al obtener los productos.');
+                            }
+                        })
+                        .then(function (data) {
+                            var tablaProductos = document.getElementById('tablaProductos');
+            
+                            // Iteramos sobre los productos y agregamos filas a la tabla
+                            data.forEach(function (producto) {
+                                var fila = document.createElement('div');
+                                fila.innerHTML = '<div class="box">' +
+                                    '<img src="images/obras/' + producto.imagen +'" alt="' + producto.nombre + '" width="75%" height="75%">' +    
+                                    '<h2 class="textocuadro">' + producto.nombre + '</h2>' +
+                                    '<h4 class="textocuadro">' + producto.descripcion + '</h4>' +
+                                    '</div>';
+                                tablaProductos.appendChild(fila);
+                            });
+                        })
+                        .catch(function (error) {
+                            // Código para manejar errores
+                            alert('Error al obtener los productos.');
+                        });
+                </script>
+            </div>
+            </section> --> -->
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <h4>2023 - Todos los derechos reservados.</h4>
+        <h4>Diseñada por GMG Group</h4>
+    </footer> -->
+    </div>
+</body>
+
+</html>

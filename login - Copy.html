@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPO FINAL</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div>
+        <H1>Ingreso de usuarios</H1>
+        <br>
+        <form id="formulario" action="inventario.html">
+            <label for="codigo">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required><br>
+    
+            <label for="descripcion">Clave:</label>
+            <input type="password" id="clave" name="clave" required><br>
+    
+        
+    
+            <button type="submit">Ingresar</button>
+            <a href="inventario.html">Menu principal</a>
+        </form>
+
+        <script>
+            
+
+
+            document.getElementById('formulario').addEventListener('submit', function (event) {
+           
+    
+                // Obtenemos los valores del formulario
+                var usuario = document.getElementById('usuario').value;
+                var clave = document.getElementById('clave').value;
+                console.log('clave')
+                if(usuario=='Maria' && clave=='Maria'){
+                    console.log('valido')
+
+                }else{
+                    alert('Usuario o clave incorrectos');
+                    return false;
+                }
+            })
+        </script>
+        
+</body>
+
+</html>
